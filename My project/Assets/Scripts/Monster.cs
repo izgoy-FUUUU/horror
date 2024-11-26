@@ -1,6 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Monster : MonoBehaviour
 {
@@ -18,5 +19,13 @@ public class Monster : MonoBehaviour
         {
            transform.Translate(Vector3.forward * 5 *Time.deltaTime);
         }
+    }
+    private void OnTriggerEnter(Collider vlas)
+    {
+        if (vlas.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(0);
+        }
+
     }
 }
