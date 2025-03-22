@@ -24,7 +24,7 @@ public class Monster : MonoBehaviour
     {
         if (vlas.CompareTag("Player"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Menu");
         }
 
     }
